@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a="1235ajsfl1256";
+  let number = parseInt(a);//逐个字母转换,能转多少算多少
+ // alert(number);//1235
+  a="abc1235";
+  let number1 = parseInt(a);
+ // alert(number1);//NaN :表示一个数字,但是数字的值不是数值
+
+//  alert(NaN==NaN);//false
+ /* if (2){
+      alert("nihao");
+  }
+*/
+//  if (2==true){//true不能转为2  2!=1
+//      alert("我喜欢你了" );//不弹窗
+//  }
+  let arr=new Array(2)
+  alert(arr.length)
+arr[0]=5;
+  arr[2]=6;
+  arr[1]=50;
+  arr[3]=10;
+  alert(arr);
+  arr.sort((a,b)=>{return a-b});
+  alert(arr)
+  let arr1=[true,1,2,3];
+  alert(arr1);
+
+  let t=setTimeout(function (){
+      alert(500);
+  },1000);
+  alert(1);
+  clearTimeout(t);
+let i=0;
+  let t2=setInterval(function (){
+      alert(i++)
+      if (i==10){
+          clearInterval(t2)
+      }
+  },50)
+</script>
+</body>
+</html>
