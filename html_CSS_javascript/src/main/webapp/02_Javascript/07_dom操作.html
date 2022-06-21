@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span id="s1" style="color: red;font-size: 50px">9</span> 秒后跳转到黑马官网...
+
+
+<script>
+    let i=8;
+    let t=setInterval(function (){
+        // innerText 不能识别 html标签
+        // innerHTML能识别 html标签
+        document.getElementById("s1").innerHTML='<font color="red" size="7">'+i-- +'</font>';
+        if(i==0){
+            clearInterval(t);
+            location.href="http://www.itheima.com";
+        }
+    },1000);
+</script>
+</body>
+</html>

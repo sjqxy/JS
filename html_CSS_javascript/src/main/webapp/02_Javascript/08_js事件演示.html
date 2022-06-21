@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+  <li>java</li>
+  <li>php</li>
+  <li>py</li>
+  <li>and</li>
+</ul>
+
+<script>
+
+
+
+
+    // 给所有的li标签,绑定鼠标移入和移出事件,移入变红,移出恢复
+    /*
+    *   1: 获取所有的li标签对象
+    *   2: 遍历数组,得到每一个li对象
+    *   3: 给对象绑定两个事件;
+    *
+    * */
+    var arr = document.getElementsByTagName("li");
+    let ys;
+    for (let i = 0; i < arr.length; i++) {
+        let e = arr[i];
+        if(i%2==0){
+            // 在遍历过程中,用e表示每个li对象
+            e.style.backgroundColor='blue';
+        }else {
+            e.style.backgroundColor='green';
+        }
+        // 给li添加一个隔行变色的效果
+        //3: 给对象绑定两个事件;(可以使用链式编程)
+        e.onmouseover=function (){
+            // 当事件触发的时候,this能表示当前li对象
+            // 获取原来的背景色并保存起来,以便于鼠标移出的时候,恢复成原始颜色
+            ys = this.style.backgroundColor;
+            this.style.backgroundColor='red';
+        };
+        e.onmouseout=function (){
+            this.style.backgroundColor=ys;
+        }
+    }
+
+</script>
+
+</body>
+</html>

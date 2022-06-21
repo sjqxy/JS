@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+     /* let t1=setTimeout(function (){
+          alert(5);
+      },1000);
+
+      alert(1);
+      clearTimeout(t1);// 取消t1这个定时器
+      alert(2);*/
+     let i=1;
+     let t2=setInterval(function (){
+         alert(i++);
+         if(i==6){
+             clearInterval(t2);
+         }
+     },500);
+  </script>
+</body>
+</html>

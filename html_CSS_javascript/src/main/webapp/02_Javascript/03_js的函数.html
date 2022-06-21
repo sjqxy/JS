@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+
+<script>
+
+    function method1(a){
+        alert("第1个方法,得到的实际参数是:"+a);
+    }
+    // 只要方法名一样,就会覆盖!
+    function method1(a,b){
+        alert("第2个方法,得到的实际参数是:"+a+","+b);
+    }
+
+    // 调用方法
+    method1('abc');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="javascript:alert('方式3')">点我呀</a>
+
+<script>
+    alert("方式1");
+</script>
+<!--如果使用外部样式引入js文件,那么script标签的里面不能写内容,否则1.js中的代码会把标签内的代码覆盖-->
+<!--<script src="../js/1.js">
+    alert("哈哈");// 这里的代码是无效代码!!!
+</script>-->
+
+<script src="../js/1.js" /> <!--使用自闭合的标签,可以避免犯错!-->
+
+
+</body>
+</html>
